@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for i in SDL{_ttf,_rtf,_net,_mixer,_image,_image,}; do
+    hg clone http://hg.libsdl.org/$i
+    echo "github = git+ssh://git@github.com/Quoturnix/$i.git" >> $i/.hg/hgrc
+done

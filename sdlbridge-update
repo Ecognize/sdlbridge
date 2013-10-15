@@ -1,0 +1,11 @@
+#!/bin/bash
+
+TOPDIR=`pwd`
+
+for i in SDL{_ttf,_rtf,_net,_mixer,_image,_image,}; do
+    cd $i
+    hg pull
+    hg update
+    hg push github
+    cd $TOPDIR
+done
